@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es2017",                        // JavaScript moderno compatible con Node.js
+    "module": "commonjs",                      // Formato de módulo común para Node
+    "rootDir": "src",                          // Código fuente en la carpeta src
+    "outDir": "dist",                          // Archivos compilados irán a dist
+    "strict": true,                            // Todas las comprobaciones estrictas habilitadas
+    "esModuleInterop": true,                   // Permite importaciones modernas de módulos CommonJS
+    "moduleResolution": "node",                // Resolución estilo Node
+    "resolveJsonModule": true,                 // Permite importar archivos JSON
+    "allowSyntheticDefaultImports": true,      // Soporte para imports sin default export
+    "forceConsistentCasingInFileNames": true,  // Evita errores por diferencia de mayúsculas/minúsculas
+    "sourceMap": true,                         // Genera archivos .map para debugging
+    "skipLibCheck": true                       // Mejora tiempos de compilación
+  },
+  "include": ["src"],                          // Solo compila lo que esté dentro de src
+  "exclude": ["node_modules", "dist"]          // Ignora node_modules y dist al compilar
+}
