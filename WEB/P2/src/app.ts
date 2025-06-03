@@ -7,7 +7,7 @@ import {
     crearHistorialMantenimiento,
     crearHistorialUbicacion,
     obtenerSeguros,
-} from "./crud"; // Cambia a la ruta correcta si el archivo se llama distinto
+} from "./crud"; 
 
 async function main() {
     await iniciar();
