@@ -1,0 +1,84 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Accesorio {
+  id: Int!
+  nombre: String!
+  descripcion: String!
+  precio: Int!
+}
+
+type HistorialMantenimiento {
+  id: Int!
+  descripcion: String!
+  fecha: String!
+  costo: Int!
+}
+
+type Multa {
+  id: Int!
+  motivo: String!
+  valor: Int!
+  fecha: String!
+}
+
+type Query {
+  accesorios: [Accesorio!]!
+  accesorio(id: Int!): Accesorio!
+  historialesMantenimiento: [HistorialMantenimiento!]!
+  historialMantenimiento(id: Int!): HistorialMantenimiento!
+  multas: [Multa!]!
+  multa(id: Int!): Multa!
+}
+
+type Mutation {
+  createAccesorio(createAccesorioInput: CreateAccesorioInput!): Accesorio!
+  updateAccesorio(updateAccesorioInput: UpdateAccesorioInput!): Accesorio!
+  removeAccesorio(id: Int!): Accesorio!
+  createHistorialMantenimiento(createHistorialMantenimientoInput: CreateHistorialMantenimientoInput!): HistorialMantenimiento!
+  updateHistorialMantenimiento(updateHistorialMantenimientoInput: UpdateHistorialMantenimientoInput!): HistorialMantenimiento!
+  removeHistorialMantenimiento(id: Int!): HistorialMantenimiento!
+  createMulta(createMultaInput: CreateMultaInput!): Multa!
+  updateMulta(updateMultaInput: UpdateMultaInput!): Multa!
+  removeMulta(id: Int!): Multa!
+}
+
+input CreateAccesorioInput {
+  nombre: String!
+  descripcion: String!
+  precio: Int!
+}
+
+input UpdateAccesorioInput {
+  nombre: String
+  descripcion: String
+  precio: Int
+  id: Int!
+}
+
+input CreateHistorialMantenimientoInput {
+  descripcion: String!
+  fecha: String!
+  costo: Int!
+}
+
+input UpdateHistorialMantenimientoInput {
+  descripcion: String
+  fecha: String
+  costo: Int
+  id: Int!
+}
+
+input CreateMultaInput {
+  motivo: String!
+  valor: Int!
+  fecha: String!
+}
+
+input UpdateMultaInput {
+  motivo: String
+  valor: Int
+  fecha: String
+  id: Int!
+}
