@@ -33,8 +33,8 @@ export class MultaService {
     return this.repo.findOneBy({ id });
   }
 
-  async remove(id: number) {
+  async remove(id: number): Promise<void> {
     const multa = await this.findOne(id);
-    return this.repo.remove(multa);
+    await this.repo.remove(multa);
   }
 }

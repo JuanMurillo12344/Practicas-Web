@@ -3,6 +3,7 @@ import { AccesorioService } from './accesorios.service';
 import { Accesorio } from './entities/accesorio.entity';
 import { CreateAccesorioInput } from './dto/create-accesorio.input';
 import { UpdateAccesorioInput } from './dto/update-accesorio.input';
+import { DeleteResponse } from '../common/delete-response.dto';
 
 @Resolver(() => Accesorio)
 export class AccesorioResolver {
@@ -28,8 +29,9 @@ export class AccesorioResolver {
     return this.accesorioService.update(input.id, input);
   }
 
-  @Mutation(() => Accesorio)
-  removeAccesorio(@Args('id', { type: () => Int }) id: number) {
-    return this.accesorioService.remove(id);
+  @Mutation(() => DeleteResponse)
+  async removeAccesorio(@Args('id', { type: () => Int }) id: number): Promise<DeleteResponse> {
+    await this.accesorioService.remove(id);
+    return { message: `Accesorio con id ${id} eliminado correctamente` };
   }
 }

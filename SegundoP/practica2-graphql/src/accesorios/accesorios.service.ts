@@ -33,8 +33,8 @@ export class AccesorioService {
     return this.repo.findOneBy({ id });
   }
 
-  async remove(id: number) {
+  async remove(id: number): Promise<void> {
     const accesorio = await this.findOne(id);
-    return this.repo.remove(accesorio);
+    await this.repo.remove(accesorio);
   }
 }

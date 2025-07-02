@@ -13,9 +13,11 @@ cd practica2-graphql
 npm install
 npm run start:dev
 Imagenes
-![Multas](imagenes/image.png)
-![Historial](imagenes/1.png)
-![Accsesorios](imagenes/2.png)
-![Multas](imagenes/3.png)
 
+![Multas](imagen/cap1.png)
+![MULTAS](imagen/cap2.png)
+![MULTAS](imagen/cap3.png)
+![Historial](imagen/cap5.png)
+![Historial](imagen/cap6.png)
+ 
 

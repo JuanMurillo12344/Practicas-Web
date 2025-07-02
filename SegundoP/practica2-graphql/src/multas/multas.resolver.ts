@@ -3,6 +3,7 @@ import { MultaService } from './multas.service';
 import { Multa } from './entities/multa.entity';
 import { CreateMultaInput } from './dto/create-multa.input';
 import { UpdateMultaInput } from './dto/update-multa.input';
+import { DeleteResponse } from '../common/delete-response.dto';
 
 @Resolver(() => Multa)
 export class MultaResolver {
@@ -28,8 +29,8 @@ export class MultaResolver {
     return this.multaService.update(input.id, input);
   }
 
-  @Mutation(() => Multa)
-  removeMulta(@Args('id', { type: () => Int }) id: number) {
-    return this.multaService.remove(id);
-  }
-}
+  @Mutation(() => DeleteResponse)
+  async removeMulta(@Args('id', { type: () => Int }) id: number): Promise<DeleteResponse> {
+    await this.multaService.remove(id);
+    return { message: `Multa con id ${id} eliminada correctamente` };
+  }}

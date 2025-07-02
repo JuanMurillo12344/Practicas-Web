@@ -3,6 +3,7 @@ import { HistorialMantenimientoService } from './historial-mantenimiento.service
 import { HistorialMantenimiento } from './entities/historial-mantenimiento.entity';
 import { CreateHistorialMantenimientoInput } from './dto/create-historial-mantenimiento.input';
 import { UpdateHistorialMantenimientoInput } from './dto/update-historial-mantenimiento.input';
+import { DeleteResponse } from '../common/delete-response.dto';
 
 @Resolver(() => HistorialMantenimiento)
 export class HistorialMantenimientoResolver {
@@ -28,8 +29,9 @@ export class HistorialMantenimientoResolver {
     return this.service.update(input.id, input);
   }
 
-  @Mutation(() => HistorialMantenimiento)
-  removeHistorialMantenimiento(@Args('id', { type: () => Int }) id: number) {
-    return this.service.remove(id);
+  @Mutation(() => DeleteResponse)
+  async removeHistorialMantenimiento(@Args('id', { type: () => Int }) id: number): Promise<DeleteResponse> {
+    await this.service.remove(id);
+    return { message: `Historial de mantenimiento con id ${id} eliminado correctamente` };
   }
 }

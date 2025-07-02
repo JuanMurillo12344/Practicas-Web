@@ -33,8 +33,8 @@ export class HistorialMantenimientoService {
     return this.repo.findOneBy({ id });
   }
 
-  async remove(id: number) {
+  async remove(id: number): Promise<void> {
     const entity = await this.findOne(id);
-    return this.repo.remove(entity);
+    await this.repo.remove(entity);
   }
 }

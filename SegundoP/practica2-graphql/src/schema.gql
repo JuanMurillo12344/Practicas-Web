@@ -9,6 +9,10 @@ type Accesorio {
   precio: Int!
 }
 
+type DeleteResponse {
+  message: String!
+}
+
 type HistorialMantenimiento {
   id: Int!
   descripcion: String!
@@ -35,13 +39,13 @@ type Query {
 type Mutation {
   createAccesorio(createAccesorioInput: CreateAccesorioInput!): Accesorio!
   updateAccesorio(updateAccesorioInput: UpdateAccesorioInput!): Accesorio!
-  removeAccesorio(id: Int!): Accesorio!
+  removeAccesorio(id: Int!): DeleteResponse!
   createHistorialMantenimiento(createHistorialMantenimientoInput: CreateHistorialMantenimientoInput!): HistorialMantenimiento!
   updateHistorialMantenimiento(updateHistorialMantenimientoInput: UpdateHistorialMantenimientoInput!): HistorialMantenimiento!
-  removeHistorialMantenimiento(id: Int!): HistorialMantenimiento!
+  removeHistorialMantenimiento(id: Int!): DeleteResponse!
   createMulta(createMultaInput: CreateMultaInput!): Multa!
   updateMulta(updateMultaInput: UpdateMultaInput!): Multa!
-  removeMulta(id: Int!): Multa!
+  removeMulta(id: Int!): DeleteResponse!
 }
 
 input CreateAccesorioInput {
