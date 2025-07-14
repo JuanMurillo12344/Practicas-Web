@@ -14,10 +14,14 @@ npm install
 npm run start:dev
 Imagenes
 
-![Multas](imagen/cap1.png)
-![MULTAS](imagen/cap2.png)
-![MULTAS](imagen/cap3.png)
-![Historial](imagen/cap5.png)
-![Historial](imagen/cap6.png)    ,....
  
 
+![1](<imagen/cap1 copy.png>)
+![2](imagen/cap1.png)
+![3](imagen/cap3.png)
+![4](imagen/cap5.png)
+![5](imagen/cap6.png)
+![6](imagen/cap8.png)
+![7](imagen/cap10.png)
+![9](imagen/cap10.png)
+![10](imagen/cap12.png)
