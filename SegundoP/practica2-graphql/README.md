@@ -18,6 +18,6 @@ Imagenes
 ![MULTAS](imagen/cap2.png)
 ![MULTAS](imagen/cap3.png)
 ![Historial](imagen/cap5.png)
-![Historial](imagen/cap6.png)
+![Historial](imagen/cap6.png)    ,....
  
 
