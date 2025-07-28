@@ -7,7 +7,6 @@
 
 ## Instalación
 
-```bash
 git clone <URL_DEL_REPOSITORIO>
 cd practica2-graphql
 npm install
